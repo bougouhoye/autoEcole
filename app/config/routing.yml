@@ -1,3 +1,4 @@
-app:
-    resource: "@AppBundle/Controller/"
+ae_platform:
+    resource: "@AEPlatformBundle/Controller/"
     type:     annotation
+    prefix:   /platform
