@@ -1,0 +1,11 @@
+{# src/AE/PlatformBundle/Resources/views/Client/menu.html.twig #}
+
+<ul class="nav nav-pills nav-stacked">
+  {% for client in listClients %}
+    <li>
+      <a href="{{ path('ae_platform_view', {'id': client.id}) }}">
+        {{ client.nom }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

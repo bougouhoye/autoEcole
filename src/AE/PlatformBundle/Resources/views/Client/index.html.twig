@@ -1,0 +1,27 @@
+{# src/AE/PlatformBundle/Resources/views/Client/index.html.twig #}
+
+{% extends "AEPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block aeplatform_body %}
+
+  <h2>Liste des clients</h2>
+
+  <ul>
+    {% for client in listClients %}
+      <li>
+        <a href="{{ path('ae_platform_view', {'id': client.id}) }}">
+          {{ client.nom }}
+        </a>
+        par {{ client.prenom }},
+        le {{ 'now'|date('d/m/Y') }}
+      </li>
+    {% else %}
+      <li>Pas (encore !) de clients</li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
